@@ -1,16 +1,45 @@
 import React from 'react';
-import Layout from '../components/Layout'
+import Navbar from '../components/Navbar.jsx'
 import Fade from 'react-reveal/Fade';
 import Container from 'react-bootstrap/Container'
+import Tab from 'react-bootstrap/Tab'
+import Nav from 'react-bootstrap/Nav'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Portfolio = () => {
   return (
     <>
-      <Layout />
+      <Navbar />
         <Fade left>
-          <Container fluid className="homepage text-center text-white bg-blue">
-            <h1>Yes</h1>
-            <h2>Foo</h2>
+          <Container id="portfolio-page" fluid className="bg-blue">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+              <Row>
+                <Col sm={3}>
+                  <Nav variant="pills" className="flex-column">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Real Health Matters</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">BeTheDJ</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Simon's Cocktails</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                </Col>
+                <Col sm={9}>
+                  <Tab.Content>
+                    <Tab.Pane eventKey="first">
+                      <p>foo</p>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <p>poo</p>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Col>
+              </Row>
+            </Tab.Container>
           </Container>
         </Fade>
     </>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar.jsx';
 import Bounce from 'react-reveal/Bounce';
 import RubberBand from 'react-reveal/RubberBand';
 
@@ -32,7 +32,7 @@ class Home extends React.Component {
           </Bounce>
           <Container className="homepage text-center text-white">
             <Bounce bottom>
-              <ul className="list-unstyled">
+              <ul id="home-list "className="list-unstyled pb-5">
                 <li><h1>Simon Walton</h1></li>
                 <li><h2>Front End Developer</h2></li>
               </ul>
