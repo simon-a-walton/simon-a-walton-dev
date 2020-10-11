@@ -2,9 +2,11 @@
 @import './pages/portfolio.scss';
 @import './components/Navbar.scss';
 
-.bg-blue {
-  background-color: #0285ED;
+body {
+  background-image: url('./images/3.jpg');
+  background-size: cover;
 }
+
 
 .homepage {
   height: 90vh;

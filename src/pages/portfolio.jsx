@@ -6,6 +6,9 @@ import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import FastText from '../components/Fast-text.jsx'
+import Bethedj from '../components/Bethedj.jsx'
+import SimonsCocktails from '../components/Simons-cocktails.jsx'
 
 const Portfolio = () => {
   return (
@@ -31,10 +34,16 @@ const Portfolio = () => {
                 <Col sm={9}>
                   <Tab.Content>
                     <Tab.Pane eventKey="first">
-                      <p>foo</p>
+                      <FastText textOne="ReactJS" textTwo="React-Bootstrap" textThree="Mapbox API" />
+
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>poo</p>
+                      <Bethedj />
+                      <FastText textOne="Ruby on Rails" textTwo="Spotify API" textThree="Javascript" />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <SimonsCocktails />
+                      <FastText textOne="Ruby on Rails" textTwo="Cloudinary Photo Upload" textThree="Javascript" />
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>
