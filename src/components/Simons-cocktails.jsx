@@ -40,8 +40,7 @@ const SimonsCocktails = () => {
             />
           </Carousel.Item>
         </Carousel>
-        <p className="pt-2 hashtag-text"><em>#ruby #javascript #bootstrap #cloudinary</em></p>
-        <p className="pt-2 link-style"><strong>mister-cocktail-site.com</strong></p>
+        <p className="pt-2 hashtag-text"><em>#rubyonrails #mapboxAPI #cloudinaryAPI</em></p>
       </div>
         <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8 pt-2 text-left">
           <h5 className="pb-2">A web app for cocktail recipes</h5>
@@ -51,6 +50,8 @@ const SimonsCocktails = () => {
             <li>Each cocktail has a list of ingredients and dosages, which users can edit</li>
             <li>Give it a go!</li>
           </ol>
+          <p className="pt-2 link-style"><strong>mister-cocktail-site.com</strong></p>
+          <a className="git-button" href='#'>See the code <i className="fab fa-github" /></a>
         </div>
       </div>
     </>

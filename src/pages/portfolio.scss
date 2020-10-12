@@ -1,19 +1,26 @@
-#portfolio-page {
-  height: 90vh;
-}
+// #portfolio-page {
+//   height: 90vh;
+// }
+
+$baby-blue: #A2D8F1;
+$baby-pink: #E8AFD7;
+$dark-blue: #58BDED;
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #EF77CB !important;
-    font-weight: 700;
+  color: #fff;
+  background-color: $baby-pink !important;
+  font-weight: 700;
 }
 
 .nav-item a {
   color: white;
-
 }
 
 .nav-item:hover {
-    color: white;
+  color: white;
+}
 
+#back-button {
+  color: white;
+  padding: 8px;
 }
