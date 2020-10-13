@@ -50,8 +50,8 @@ const SimonsCocktails = () => {
             <li>Each cocktail has a list of ingredients and dosages, which users can edit</li>
             <li>Give it a go!</li>
           </ol>
-          <p className="pt-2 link-style"><strong>mister-cocktail-site.com</strong></p>
-          <a className="git-button" href='#'>See the code <i className="fab fa-github" /></a>
+          <p><a className="git-button" href='#'>Visit the site <i className="fas fa-laptop" /></a></p>
+          <p><a className="git-button" href='#'>See the code <i className="fab fa-github" /></a></p>
         </div>
       </div>
     </>

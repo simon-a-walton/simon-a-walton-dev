@@ -83,6 +83,7 @@ nav a {
 .git-button {
   padding: 8px;
   background-color: pink;
+  margin-bottom: 20px;
   border-radius: 4px;
   color: white;
   &:hover {
@@ -90,6 +91,7 @@ nav a {
     text-decoration: none;
   }
 }
+
 
 #footer {
   font-size: calc(16px + 1.2vh);

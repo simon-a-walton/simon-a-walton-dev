@@ -65,8 +65,8 @@ const Bethedj = () => {
           <li>The DJ has a dashboard where they can see the top requested songs of the night.</li>
           <li>Once the DJ has played the track, all users will see this on their dashboard and they cannot vote again.</li>
         </ol>
-        <p className="pt-2 link-style"><strong>bethedj.club</strong></p>
-        <a className="git-button" href='#'>See the code <i className="fab fa-github" /></a>
+        <p><a className="git-button" href='#'>Visit the site <i className="fas fa-laptop" /></a></p>
+        <p><a className="git-button" href='#'>See the code <i className="fab fa-github" /></a></p>
       </div>
     </div>
   </>
