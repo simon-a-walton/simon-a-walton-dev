@@ -4,8 +4,6 @@ import Fade from 'react-reveal/Fade';
 import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
-
-
 const aboutImage = css({
   width: '250px'
 });
@@ -32,7 +30,6 @@ const linkStyle = css({
 const About = () => {
   return (
     <>
-
     <Fade>
       <Navbar
         containerClassName={containerStyle}
@@ -48,15 +45,13 @@ const About = () => {
             />
           </div>
            <div className="col-lg-8 col-md-12 ">
-        <h2>Coding</h2>
-          <p>
-            I'm a recent graduate from a Full-Stack Web Development programme, during which I delivered 3 MVC apps using Ruby on Rails, PostgreSQL, JavaScript, HTML5, CSS3 and Bootstrap.
-            Due to the fast pace of the course I have become a very fast learner and am eager to develop my skills and knowledge as a Front End Developer. I’m currently working on freelance projects using ReactJS and having strict code reviews with a Senior Developer.
-          </p>
+            <h2>Coding</h2>
+              <p>
+                I'm a recent graduate from a Full-Stack Web Development programme, during which I delivered 3 MVC apps using Ruby on Rails, PostgreSQL, JavaScript, HTML5, CSS3 and Bootstrap.
+                Due to the fast pace of the course I have become a very fast learner and am eager to develop my skills and knowledge as a Front End Developer. I’m currently working on freelance projects using ReactJS and having strict code reviews with a Senior Developer.
+              </p>
+            </div>
           </div>
-          </div>
-
-
           <div className="row pt-4">
             <div className="col-lg-4 col-md-12 text-center pb-3">
               <img
@@ -64,17 +59,15 @@ const About = () => {
                 alt="Simon the Coaching Machine"
                 className={aboutImage}
               />
+            </div>
+            <div className="col-lg-8 col-md-12">
+              <h2>Coaching</h2>
+              <p>
+                I have experience working as a Positive Psychologist and Coach for tech companies. I have helped people to improve their communication and confidence skills by running workshops such as Presenting Skills and Having Difficult Conversations. More on my coaching work can be found <span><a href="https://inside.edited.com/why-we-put-wellbeing-at-the-heart-of-company-culture-cddee6550a90?gi=75e8b02e59e8" className={webLink}> here.</a></span>
+              </p>
+            </div>
           </div>
-        <div className="col-lg-8 col-md-12">
-          <h2>Coaching</h2>
-          <p>
-            I have experience working as a Positive Psychologist and Coach for tech companies. I have helped people to improve their communication and confidence skills by running workshops such as Presenting Skills and Having Difficult Conversations. More on my coaching work can be found <span><a href="https://inside.edited.com/why-we-put-wellbeing-at-the-heart-of-company-culture-cddee6550a90?gi=75e8b02e59e8" className={webLink}> here.</a></span>
-          </p>
         </div>
-        </div>
-
-         </div>
-
         <div className={`py-4 ${css({ backgroundColor: 'white', color: colors.darkBlue })}`}>
           <h3 className="text-center">Top Skills</h3>
           <ul className="d-flex flex-wrap justify-content-center" id="top-skills">
@@ -87,11 +80,8 @@ const About = () => {
             <li><i className="fas fa-network-wired" /> <em>SQL</em></li>
             <li><i className="fas fa-palette" /> <em>Glamor</em></li>
           </ul>
-      </div>
-
+        </div>
       </Fade>
-
-
     </>
   )
 }
