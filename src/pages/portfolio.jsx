@@ -9,14 +9,30 @@ import Col from 'react-bootstrap/Col'
 import Bethedj from '../components/Bethedj.jsx'
 import RealHealthMatters from '../components/RealHealthMatters.jsx'
 import SimonsCocktails from '../components/Simons-cocktails.jsx'
-import { Link } from "react-router-dom";
+import { css } from 'glamor';
+import { colors } from './../constants/StyleConstants';
+
+const containerStyle = css({
+  backgroundColor: colors.darkBlue,
+  color: 'white'
+});
+
+const linkStyle = css({
+  color: 'white',
+  ':hover': {textDecoration: 'none', color: colors.babyPink}
+});
+
 
 const Portfolio = () => {
   return (
     <>
-      <Fade left>
-        <Container id="portfolio-page" fluid>
-          <Navbar />
+      <Fade>
+        <Navbar
+          containerClassName={containerStyle}
+          linkClassName={linkStyle}
+        />
+        <Container id="portfolio-page" fluid className="bg-white text-black">
+
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
               <Col sm={3}>
@@ -31,7 +47,7 @@ const Portfolio = () => {
                     <Nav.Link eventKey="second">BeTheDJ</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Simon's Cocktails</Nav.Link>
+                    <Nav.Link eventKey="third">Mister Cocktail</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>

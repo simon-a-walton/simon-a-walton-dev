@@ -14,7 +14,7 @@ class Home extends React.Component {
       const onClick = () => setShowResults(true)
       return (
         <Container fluid className="bg-div bg-blue">
-          <RubberBand delay={1250}>
+          <RubberBand delay={1000}>
             <img
               src={simonlogo}
               onClick={onClick}

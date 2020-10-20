@@ -60,21 +60,21 @@ svg:hover {
   cursor:pointer;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  &:hover {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-  }
-}
+// nav a {
+//   text-decoration: none;
+//   color: white;
+//   &:hover {
+//     text-decoration: none;
+//     color: white;
+//     font-weight: 500;
+//   }
+// }
 
-.nav-item a:hover {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
+// .nav-item a:hover {
+//   text-decoration: none;
+//   color: white;
+//   font-weight: 500;
+// }
 
 #portfolio-nav {
   font-size: calc(16px + 2vh);
@@ -102,12 +102,8 @@ nav a {
   margin-right: 28px;
 }
 
-#about-img {
-  width: 300px;
-}
-
 #about-page {
-  font-size: calc(16px + 2vh)
+  font-size: calc(8px + 1.15vh)
 }
 
 @media screen
@@ -118,6 +114,11 @@ nav a {
   #portfolio-page {
     height: 100%;
   }
+
+  #top-skills li {
+  display: block;
+  margin-right: 28px;
+}
 
   #back-button {
     padding: 0;

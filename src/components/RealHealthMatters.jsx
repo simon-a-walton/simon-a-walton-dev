@@ -1,49 +1,39 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import bedjevent from "./../images/bedjevent.jpg"
-import bedjhome from "./../images/bedjevent.jpg"
-import bedjlist from "./../images/bedjlist.jpg"
-import bedjmap from "./../images/bedjmap.jpg"
-import bedjplay from "./../images/bedjplay.jpg"
+import RHM1 from "./../images/RHM1.jpg"
+import RHM2 from "./../images/RHM2.jpg"
+import RHM3 from "./../images/RHM3.jpg"
+import { css } from 'glamor';
+import { colors } from './../constants/StyleConstants';
+
+export const imageBorder = css({
+  border: `6px solid ${colors.darkBlue}`
+})
 
 const Bethedj = () => {
   return (
     <>
     <div className="row p-3">
       <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <Carousel style={{border:'6px solid white'}}>
+        <Carousel {...imageBorder}>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={bedjevent}
+              src={RHM1}
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={bedjhome}
+              src={RHM2}
               alt="Second slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src={bedjlist}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjmap}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjplay}
+              src={RHM3}
               alt="Third slide"
             />
           </Carousel.Item>

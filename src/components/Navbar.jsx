@@ -1,14 +1,22 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
-
-const Navbar = () => {
-  return (
+class Navbar extends React.PureComponent {
+  static propsTypes = {
+  containerClassName: PropTypes.string,
+  linkClassName: PropTypes.string
+};
+  render() {
+      return (
     <>
-      <nav className="p-3">
+      <nav className={`p-3 ${this.props.containerClassName}`}>
         <div className="row text-center ">
-          <div className="col">
-            <Link to='/about'>
+          <div className="col d-flex justify-content-around">
+            <Link to='/' className={this.props.linkClassName}>
+                <i className="fas fa-arrow-left" />
+            </Link>
+            <Link to='/about' className={this.props.linkClassName}>
               <ul className="list-unstyled">
                 <li><i className="fas fa-laptop-code" /></li>
                 <li>About</li>
@@ -16,12 +24,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div id="portfolio-nav" className="col">
-            <Link to='/portfolio'>
+            <Link to='/portfolio' className={this.props.linkClassName}>
               <strong>Portfolio</strong>
             </Link>
           </div>
           <div className="col">
-            <a href="mailto:simonwaltondev@gmail.com">
+            <a href="mailto:simonwaltondev@gmail.com" className={this.props.linkClassName}>
               <ul className="list-unstyled">
                 <li><i className="fas fa-paper-plane" /></li>
                 <li>Contact</li>
@@ -32,6 +40,13 @@ const Navbar = () => {
       </nav>
     </>
   )
+  }
+
 }
 
 export default Navbar;
+
+
+
+
+
