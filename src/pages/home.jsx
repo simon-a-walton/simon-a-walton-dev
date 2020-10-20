@@ -9,16 +9,6 @@ import simonHeadshot from './../images/simon-headshot.jpg';
 import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
-const containerStyle = css({
-  backgroundColor: 'rgba(255, 255, 255, 0.95)',
-  color: colors.darkBlue
-});
-
-const linkStyle = css({
-  color: colors.darkBlue,
-  ':hover': {textDecoration: 'none', color: colors.babyPink}
-});
-
 class Home extends React.Component {
   render() {
     const Search = () => {
@@ -43,10 +33,7 @@ class Home extends React.Component {
       return (
         <div>
           <Bounce top>
-            <Navbar
-              containerClassName={containerStyle}
-              linkClassName={linkStyle}
-            />
+            <Navbar />
           </Bounce>
           <Container className="homepage text-center text-white">
            <img

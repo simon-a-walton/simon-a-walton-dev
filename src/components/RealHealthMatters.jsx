@@ -7,8 +7,7 @@ import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
 export const imageBorder = css({
-  border: `6px solid white`,
-  paddingBottom: '36px'
+  border: `6px solid white`
 });
 
 export const listStyle = css({

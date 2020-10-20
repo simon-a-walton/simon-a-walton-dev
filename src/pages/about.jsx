@@ -17,25 +17,12 @@ const webLink = css({
   }
 });
 
-const containerStyle = css({
-  backgroundColor: 'white',
-  color: colors.darkBlue
-});
-
-const linkStyle = css({
-  color: colors.darkBlue,
-  ':hover': {textDecoration: 'none', color: colors.babyPink}
-});
-
 const About = () => {
   return (
     <>
     <Fade>
-      <Navbar
-        containerClassName={containerStyle}
-        linkClassName={linkStyle}
-      />
-      <div className={`container-fluid ${css({ backgroundColor: 'rgba(88, 189, 237, 0.45)', color: 'white' })}`} id="about-page">
+      <Navbar />
+      <div className={`container-fluid ${css({ color: 'white' })}`} id="about-page">
         <div className="row pt-4">
           <div className="col-lg-4 col-md-12 text-center pb-3">
             <img
@@ -80,7 +67,6 @@ const About = () => {
             <li><i className="fas fa-paint-brush mx-1" id = "css" /> <em>SCSS</em></li>
             <li><i className="fas fa-network-wired" /> <em>SQL</em></li>
             <li><i className="fas fa-palette" /> <em>Glamor</em></li>
-
           </ul>
         </div>
       </Fade>
