@@ -5,7 +5,19 @@ import Footer from '../components/Footer.jsx';
 import Bounce from 'react-reveal/Bounce';
 import RubberBand from 'react-reveal/RubberBand';
 import Sparkle from 'react-sparkle';
-import simonlogo from './../images/simonlogo.png';
+import simonHeadshot from './../images/simon-headshot.jpg';
+import { css } from 'glamor';
+import { colors } from './../constants/StyleConstants';
+
+const containerStyle = css({
+  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+  color: colors.darkBlue
+});
+
+const linkStyle = css({
+  color: colors.darkBlue,
+  ':hover': {textDecoration: 'none', color: colors.babyPink}
+});
 
 class Home extends React.Component {
   render() {
@@ -13,17 +25,17 @@ class Home extends React.Component {
       const [showResults, setShowResults] = useState(false)
       const onClick = () => setShowResults(true)
       return (
-        <Container fluid className="bg-div bg-blue">
+        <div className="bg-div bg-blue">
           <RubberBand delay={1000}>
             <img
-              src={simonlogo}
+              src={simonHeadshot}
               onClick={onClick}
               alt="Simon the Coding Machine"
               className="simon-image"
             />
           </RubberBand>
             { showResults ? <Results/> : null }
-        </Container>
+        </div>
     )
   }
 
@@ -31,7 +43,10 @@ class Home extends React.Component {
       return (
         <div>
           <Bounce top>
-            <Navbar />
+            <Navbar
+              containerClassName={containerStyle}
+              linkClassName={linkStyle}
+            />
           </Bounce>
           <Container className="homepage text-center text-white">
            <img
@@ -41,14 +56,14 @@ class Home extends React.Component {
             />
             <Bounce bottom>
               <ul id="home-list "className="list-unstyled pt-1">
-                <li id="name-text">SIMON WALTON</li>
-                <li style={{ position: 'relative' }}>
+                <li id="name-text"><strong>SIMON WALTON</strong></li>
+                <li id="description-text" style={{ position: 'relative' }}>
                   <Sparkle
-                    color={'pink'}
+                    color={'white'}
                     count={30}
                     flickerSpeed={'slow'}
                   />
-                  Front End Developer
+                  <strong>Front End Developer</strong>
                 </li>
                 <li><Footer /></li>
               </ul>

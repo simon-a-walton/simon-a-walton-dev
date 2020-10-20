@@ -11,14 +11,17 @@
 
 body {
 /*  background-image: url('./images/3 (1).png');*/
-  background-color: lightblue;
+  background-image: url('./images/3(1).png');
 
 }
 
 footer a {
-  color: pink;
+  color: white;
   &:hover {
+    background-color: $dark-blue;
     color: white;
+    padding: 8px;
+    border-radius: 4px;
   }
 }
 
@@ -49,7 +52,11 @@ footer a {
 }
 
 #name-text {
-  font-size: calc(20px + 2vh);
+  font-size: calc(20px + 3vw);
+}
+
+#description-text {
+  font-size: calc(16px + 1.2vw);
 }
 
 svg:hover {

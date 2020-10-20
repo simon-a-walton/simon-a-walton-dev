@@ -14,7 +14,7 @@ class Navbar extends React.PureComponent {
         <div className="row text-center ">
           <div className="col d-flex justify-content-around">
             <Link to='/' className={this.props.linkClassName}>
-                <i className="fas fa-arrow-left" />
+                <i className="fas fa-house-damage" />
             </Link>
             <Link to='/about' className={this.props.linkClassName}>
               <ul className="list-unstyled">
