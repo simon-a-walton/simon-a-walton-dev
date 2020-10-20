@@ -35,7 +35,7 @@ class Home extends React.Component {
           </Bounce>
           <Container className="homepage text-center text-white">
            <img
-              src="https://avatars2.githubusercontent.com/u/60608204?s=460&u=517fe81ca49a5627e1e845120537a7a5b6f3b346&v=4"
+              src={simonHeadshot}
               alt="Simon the Coding Machine"
               className="simon-image"
             />

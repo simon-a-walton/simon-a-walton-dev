@@ -60,7 +60,7 @@ const RealHealthMatters = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2 text-left">
+      <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2">
         <ul className={listStyle} id="top-skills">
           <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
           <li><i className="fab fa-react" /> <em>ReactJS</em></li>

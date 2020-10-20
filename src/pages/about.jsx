@@ -5,7 +5,7 @@ import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
 const aboutImage = css({
-  width: '250px'
+  width: '200px'
 });
 
 const topSkillsBox = css({
@@ -28,7 +28,7 @@ const About = () => {
     <>
     <Fade>
       <Navbar />
-      <div className={`container-fluid ${css({ color: 'white' })}`} id="about-page">
+      <div className={`container-fluid p-4 ${css({ color: 'white' })}`} id="about-page">
         <div className="row pt-4">
           <div className="col-lg-4 col-md-12 text-center pb-3">
             <img
