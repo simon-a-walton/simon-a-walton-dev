@@ -55,8 +55,8 @@ const Bethedj = () => {
       <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2 text-left">
         <ul className={listStyle} id="top-skills">
           <li><i className="fas fa-gem mx-1" id = "ruby" /> <em>Ruby on Rails</em></li>
-          <li><i class="fab fa-spotify" /> <em>Spotify API</em></li>
-          <li><i class="fas fa-map-marked-alt" /> <em>Mapbox API</em></li>
+          <li><i className="fab fa-spotify" /> <em>Spotify API</em></li>
+          <li><i className="fas fa-map-marked-alt" /> <em>Mapbox API</em></li>
           <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
           <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
         </ul>

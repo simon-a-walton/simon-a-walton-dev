@@ -8,6 +8,12 @@ const aboutImage = css({
   width: '250px'
 });
 
+const topSkillsBox = css({
+  backgroundColor: 'white',
+  color: colors.darkBlue,
+  borderRadius: '8px'
+});
+
 const webLink = css({
   textDecoration: 'none',
   color: 'white',
@@ -55,7 +61,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className={`py-4 ${css({ backgroundColor: 'white', color: colors.darkBlue })}`}>
+        <div className={`container py-3 my-3 ${topSkillsBox}`}>
           <h3 className="text-center">Top Skills</h3>
           <ul className="d-flex flex-wrap justify-content-center" id="top-skills">
             <li><i className="fab fa-react" /> <em>ReactJS</em></li>

@@ -6,8 +6,6 @@ import Bounce from 'react-reveal/Bounce';
 import RubberBand from 'react-reveal/RubberBand';
 import Sparkle from 'react-sparkle';
 import simonHeadshot from './../images/simon-headshot.jpg';
-import { css } from 'glamor';
-import { colors } from './../constants/StyleConstants';
 
 class Home extends React.Component {
   render() {

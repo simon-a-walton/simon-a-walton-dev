@@ -34,17 +34,14 @@ const Portfolio = () => {
               <Col sm={9}>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-{/*                      <FastText textOne="ReactJS" textTwo="React-Bootstrap" textThree="Mapbox API" />
-*/}                   <RealHealthMatters />
+                    <RealHealthMatters />
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
                     <Bethedj />
-{/*                      <FastText textOne="Ruby on Rails" textTwo="Spotify API" textThree="Javascript" />
-*/}                    </Tab.Pane>
+                  </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <SimonsCocktails />
-{/*                      <FastText textOne="Ruby on Rails" textTwo="Cloudinary Photo Upload" textThree="Javascript" />
-*/}                    </Tab.Pane>
+                  </Tab.Pane>
                 </Tab.Content>
               </Col>
             </Row>
