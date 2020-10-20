@@ -1,6 +1,21 @@
 import React from "react";
+import { colors } from "./../constants/StyleConstants";
+import { css } from 'glamor';
 
-export default class MyForm extends React.Component {
+const submitButton = css({
+  marginTop: '12px',
+  backgroundColor: colors.babyPink,
+  color: 'white',
+  border: '2px solid white',
+  borderRadius: '8px'
+});
+
+const inputBorder = css({
+  border: '2px solid white',
+  borderRadius: '8px'
+});
+
+export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
@@ -17,11 +32,17 @@ export default class MyForm extends React.Component {
         action="https://formspree.io/f/mrgopdgy"
         method="POST"
       >
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <label>Message:</label>
-        <input type="text" name="message" />
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+        <div className="row text-white">
+          <div className="col-lg-12 col-sm-12">
+            <label>Email:</label>
+            <input type="email" name="email" className={`w-100 ${inputBorder}`}/>
+          </div>
+          <div className="col-12 pt-2">
+            <label>Message:</label>
+            <input type="text" name="message" className={`p-3 w-100 ${inputBorder}`} />
+          </div>
+        </div>
+        {status === "SUCCESS" ? <p>Thanks!</p> : <button className={submitButton}>Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
     );
