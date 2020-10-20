@@ -71,6 +71,7 @@ const About = () => {
         <div className={`py-4 ${css({ backgroundColor: 'white', color: colors.darkBlue })}`}>
           <h3 className="text-center">Top Skills</h3>
           <ul className="d-flex flex-wrap justify-content-center" id="top-skills">
+            <li><i className="fab fa-react" /> <em>ReactJS</em></li>
             <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
             <li><i className="fas fa-gem mx-1" id = "ruby" /> <em>Ruby on Rails</em></li>
             <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
@@ -79,6 +80,7 @@ const About = () => {
             <li><i className="fas fa-paint-brush mx-1" id = "css" /> <em>SCSS</em></li>
             <li><i className="fas fa-network-wired" /> <em>SQL</em></li>
             <li><i className="fas fa-palette" /> <em>Glamor</em></li>
+
           </ul>
         </div>
       </Fade>

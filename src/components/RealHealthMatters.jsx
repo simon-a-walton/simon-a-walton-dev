@@ -7,14 +7,36 @@ import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
 export const imageBorder = css({
-  border: `6px solid ${colors.darkBlue}`
+  border: `6px solid white`,
+  paddingBottom: '36px'
+});
+
+export const listStyle = css({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  backgroundColor: 'white',
+  color: colors.darkBlue,
+  padding: '8px',
+  borderRadius: '8px'
+});
+
+export const buttonList = css({
+  listStyleType: 'none',
+  display: 'flex',
+  justifyContent: 'center',
+});
+
+export const buttonListItem = css({
+  margin: '10px',
+  fontSize: '12px'
 })
 
-const Bethedj = () => {
+const RealHealthMatters = () => {
   return (
     <>
     <div className="row p-3">
-      <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <Carousel {...imageBorder}>
           <Carousel.Item>
             <img
@@ -38,29 +60,30 @@ const Bethedj = () => {
             />
           </Carousel.Item>
         </Carousel>
-        <p className="pt-2 hashtag-text"><em>#rubyonrails #spotifyAPI #mapboxAPI</em></p>
       </div>
-
-      <div className="col-sm-12 col-md-6 col-lg-8 col-xl-8 pt-2 text-left">
-        <h5 className="pb-2">A mobile web-app for requesting songs in bars and clubs</h5>
-        <h6>Features for Bars:</h6>
+      <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2 text-left">
+        <ul className={listStyle} id="top-skills">
+          <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
+          <li><i className="fab fa-react" /> <em>ReactJS</em></li>
+          <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
+          <li><i className="fas fa-palette" /> <em>Glamor</em></li>
+        </ul>
+        <h5 className="pb-2">A website for the Health Coaching company 'Real Health Matters'</h5>
+         <h6>Features:</h6>
         <ol>
-          <li>It uses Soptify's API to add songs to a playlist's queue and display which song is currently playing</li>
-          <li>Once a song has been added to a playlist's queue, the request button disappears and other users cannot request the same song</li>
+          <li>User can see the coach's location on Mapbox map</li>
+          <li>User can send a message via an embedded form</li>
+          <li>There is a fun animation on the homepage with the title text appearing line-by-line</li>
+          <li>This is my first project using ReactJS and using in-line styling with Glamor</li>
         </ol>
-         <h6>Features for Clubs:</h6>
-        <ol>
-          <li>A DJ can upload their playlist for an event at a certain venue.</li>
-          <li>Clubbers can search through this playlist and can request the songs they want.</li>
-          <li>The DJ has a dashboard where they can see the top requested songs of the night.</li>
-          <li>Once the DJ has played the track, all users will see this on their dashboard and they cannot vote again.</li>
-        </ol>
-        <p><a className="git-button" href='#'>Visit the site <i className="fas fa-laptop" /></a></p>
-        <p><a className="git-button" href='#'>See the code <i className="fab fa-github" /></a></p>
+        <ul {...buttonList}>
+          <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>Visit the site <i className="fas fa-laptop" /></a></li>
+          <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>See the code <i className="fab fa-github" /></a></li>
+        </ul>
       </div>
     </div>
   </>
   )
 }
 
-export default Bethedj;
+export default RealHealthMatters;

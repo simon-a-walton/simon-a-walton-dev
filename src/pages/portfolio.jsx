@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar.jsx'
 import Fade from 'react-reveal/Fade';
-import Container from 'react-bootstrap/Container'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
@@ -13,15 +12,14 @@ import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 
 const containerStyle = css({
-  backgroundColor: colors.darkBlue,
-  color: 'white'
+  backgroundColor: 'white',
+  color: colors.darkBlue
 });
 
 const linkStyle = css({
-  color: 'white',
+  color: colors.darkBlue,
   ':hover': {textDecoration: 'none', color: colors.babyPink}
 });
-
 
 const Portfolio = () => {
   return (
@@ -31,14 +29,10 @@ const Portfolio = () => {
           containerClassName={containerStyle}
           linkClassName={linkStyle}
         />
-        <Container id="portfolio-page" fluid className="bg-white text-black">
-
+        <div className={`container-fluid ${css({ backgroundColor: 'rgba(88, 189, 237, 0.45)', color: 'white' })}`} id="portfolio-page">
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
-              <Col sm={3}>
-                {/*<Link to='/'>
-                  <p id="back-button"><i className="fas fa-chevron-left" /></p>
-                </Link>*/}
+              <Col sm={3} className="mt-3">
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item>
                     <Nav.Link eventKey="first">Real Health Matters</Nav.Link>
@@ -69,7 +63,7 @@ const Portfolio = () => {
               </Col>
             </Row>
           </Tab.Container>
-        </Container>
+        </div>
       </Fade>
     </>
   )
