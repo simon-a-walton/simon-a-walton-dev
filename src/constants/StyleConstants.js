@@ -4,4 +4,6 @@ export const colors = {
   darkBlue: '#58BDED'
 }
 
-
+export const textContent = {
+  fontSize: 'calc(12px + 0.55vw)'
+}
