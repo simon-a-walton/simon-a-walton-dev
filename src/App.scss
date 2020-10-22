@@ -1,5 +1,4 @@
 @import './pages/portfolio.scss';
-@import './components/Navbar.scss';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -53,27 +52,9 @@ svg:hover {
   fill: white;
 }
 
-
-
 .simon-image:hover {
   cursor:pointer;
 }
-
-// nav a {
-//   text-decoration: none;
-//   color: white;
-//   &:hover {
-//     text-decoration: none;
-//     color: white;
-//     font-weight: 500;
-//   }
-// }
-
-// .nav-item a:hover {
-//   text-decoration: none;
-//   color: white;
-//   font-weight: 500;
-// }
 
 #portfolio-nav {
   font-size: calc(16px + 1.5vw);
@@ -90,7 +71,6 @@ svg:hover {
     text-decoration: none;
   }
 }
-
 
 #footer {
   font-size: calc(16px + 1.2vh);
@@ -117,7 +97,4 @@ svg:hover {
   #footer {
     font-size: 16px;
   }
-
-
-
 }
