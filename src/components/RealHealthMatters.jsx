@@ -17,6 +17,7 @@ export const listStyle = css({
   backgroundColor: 'white',
   color: colors.darkBlue,
   padding: '8px',
+  margin: '40px 0',
   borderRadius: '8px'
 });
 
@@ -60,9 +61,9 @@ const RealHealthMatters = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2">
+      <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
 
-        <h5 className="pb-2">A website for the Health Coaching company 'Real Health Matters'</h5>
+        <h5 className="py-4">A website for a Health Coaching company</h5>
          <h6>Features:</h6>
         <ol>
           <li>User can see the coach's location on Mapbox map</li>
@@ -70,16 +71,16 @@ const RealHealthMatters = () => {
           <li>There is a fun animation on the homepage with the title text appearing line-by-line</li>
           <li>This is my first project using ReactJS and using in-line styling with Glamor</li>
         </ol>
-        <ul className={listStyle} id="top-skills">
+        <div className={listStyle} id="top-skills">
           <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
           <li><i className="fab fa-react" /> <em>ReactJS</em></li>
           <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
           <li><i className="fas fa-palette" /> <em>Glamor</em></li>
-        </ul>
-        <ul {...buttonList}>
-          <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>Visit the site <i className="fas fa-laptop" /></a></li>
-          <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>See the code <i className="fab fa-github" /></a></li>
-        </ul>
+        </div>
+        <div {...buttonList}>
+          <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>The site <i className="fas fa-laptop" /></a></li>
+          <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>The code <i className="fab fa-github" /></a></li>
+        </div>
       </div>
     </div>
   </>
