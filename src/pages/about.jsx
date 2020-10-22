@@ -71,7 +71,7 @@ const About = () => {
         </div>
         <div className={`container py-3 my-3 ${topSkillsBox}`}>
           <h3 className="text-center">Top Skills</h3>
-          <ul className="d-flex flex-wrap justify-content-center" id="top-skills">
+          <div className="d-flex flex-wrap justify-content-center" id="top-skills">
             <li><i className="fab fa-react" /> <em>ReactJS</em></li>
             <li><i className="fab fa-js-square" /> <em>Javascript ES6</em></li>
             <li><i className="fas fa-gem" /> <em>Ruby on Rails</em></li>
@@ -80,7 +80,7 @@ const About = () => {
             <li><i className="far fa-file-alt" /> <em>HTML5</em></li>
             <li><i className="fas fa-paint-brush" /> <em>SCSS</em></li>
             <li><i className="fas fa-palette" /> <em>Glamor</em></li>
-          </ul>
+          </div>
         </div>
       </Fade>
     </>
