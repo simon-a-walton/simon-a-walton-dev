@@ -6,6 +6,16 @@ import Bounce from 'react-reveal/Bounce';
 import RubberBand from 'react-reveal/RubberBand';
 import Sparkle from 'react-sparkle';
 import simonHeadshot from './../images/simon-headshot.jpg';
+import { css } from 'glamor';
+
+const nameText = css({
+  fontSize: 'calc(10px + 2.2vw)'
+});
+
+const descriptionText =css({
+  fontSize: 'calc(10px + 1.2vw)',
+  position: 'relative'
+});
 
 class Home extends React.Component {
   render() {
@@ -40,9 +50,9 @@ class Home extends React.Component {
               className="simon-image"
             />
             <Bounce bottom>
-              <ul id="home-list "className="list-unstyled pt-1">
-                <li id="name-text"><strong>SIMON WALTON</strong></li>
-                <li id="description-text" style={{ position: 'relative' }}>
+              <ul className="list-unstyled">
+                <li {...nameText}><strong>SIMON WALTON</strong></li>
+                <li {...descriptionText}>
                   <Sparkle
                     color={'white'}
                     count={30}
