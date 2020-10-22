@@ -1,6 +1,4 @@
-@import './pages/home.scss';
 @import './pages/portfolio.scss';
-@import './components/Navbar.scss';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -25,7 +23,7 @@ footer a {
 }
 
 .homepage {
-  height: 90vh;
+  height: 85vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -50,39 +48,13 @@ footer a {
   border-radius: 50%;
 }
 
-#name-text {
-  font-size: calc(20px + 3vw);
-}
-
-#description-text {
-  font-size: calc(16px + 1.2vw);
-}
-
 svg:hover {
   fill: white;
 }
 
-
-
 .simon-image:hover {
   cursor:pointer;
 }
-
-// nav a {
-//   text-decoration: none;
-//   color: white;
-//   &:hover {
-//     text-decoration: none;
-//     color: white;
-//     font-weight: 500;
-//   }
-// }
-
-// .nav-item a:hover {
-//   text-decoration: none;
-//   color: white;
-//   font-weight: 500;
-// }
 
 #portfolio-nav {
   font-size: calc(16px + 1.5vw);
@@ -100,14 +72,13 @@ svg:hover {
   }
 }
 
-
 #footer {
   font-size: calc(16px + 1.2vh);
 }
 
 #top-skills li {
   display: inline;
-  margin-right: 28px;
+  margin: 12px;
 }
 
 @media screen
@@ -119,8 +90,6 @@ svg:hover {
     height: 100%;
   }
 
-
-
   #back-button {
     padding: 0;
   }
@@ -128,7 +97,4 @@ svg:hover {
   #footer {
     font-size: 16px;
   }
-
-
-
 }

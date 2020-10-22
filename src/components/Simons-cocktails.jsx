@@ -42,24 +42,24 @@ const SimonsCocktails = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-        <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 pt-2 text-left">
-        <h5 className="pb-2">A web app for cocktail recipes</h5>
+        <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
+        <h5 className="py-4">A web app for cocktail recipes</h5>
           <h6>Features:</h6>
           <ol>
             <li>Users can add their own cocktails and upload pictures</li>
             <li>Each cocktail has a list of ingredients and dosages, which users can edit</li>
             <li>Give it a go!</li>
           </ol>
-          <ul className={listStyle} id="top-skills">
+          <div className={listStyle} id="top-skills">
             <li><i className="fas fa-gem mx-1" id = "ruby" /> <em>Ruby on Rails</em></li>
             <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
             <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
             <li><i className="fas fa-cloud-upload-alt" /> <em>Cloudinary Upload API</em></li>
-          </ul>
-          <ul {...buttonList}>
-            <li {...buttonListItem}><a className="git-button" href='https://mister-cocktail-site.herokuapp.com/'>Visit the site <i className="fas fa-laptop" /></a></li>
-            <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/rails-mister-cocktail'>See the code <i className="fab fa-github" /></a></li>
-        </ul>
+          </div>
+          <div {...buttonList}>
+            <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>The site <i className="fas fa-laptop" /></a></li>
+            <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>The code <i className="fab fa-github" /></a></li>
+        </div>
       </div>
     </div>
     </>
