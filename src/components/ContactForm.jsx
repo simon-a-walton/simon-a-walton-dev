@@ -7,7 +7,11 @@ const submitButton = css({
   backgroundColor: colors.babyPink,
   color: 'white',
   border: '2px solid white',
-  borderRadius: '8px'
+  borderRadius: '8px',
+  ':hover': {
+    color: 'black',
+    border: '2px solid black',
+  }
 });
 
 const inputBorder = css({
