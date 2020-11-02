@@ -7,7 +7,11 @@ const submitButton = css({
   backgroundColor: colors.babyPink,
   color: 'white',
   border: '2px solid white',
-  borderRadius: '8px'
+  borderRadius: '8px',
+  ':hover': {
+    color: 'black',
+    border: '2px solid black',
+  }
 });
 
 const inputBorder = css({
@@ -35,7 +39,7 @@ export default class ContactForm extends React.Component {
         <div className="row text-white">
           <div className="col-lg-12 col-sm-12">
             <label>Email:</label>
-            <input type="email" name="email" className={`w-100 ${inputBorder}`}/>
+            <input type="email" name="email" className={`w-100 ${inputBorder}`} required/>
           </div>
           <div className="col-12 pt-2">
             <label>Message:</label>

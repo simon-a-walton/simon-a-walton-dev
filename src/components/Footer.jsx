@@ -1,24 +1,38 @@
-import React from 'react'
+import React from 'react';
+import { css } from 'glamor';
+import { socialLinks } from "./../constants/LinkConstants";
 
-const Footer = () => {
-  return (
-    <>
-      <footer id="footer" className="p-3">
-        <div className="row text-center ">
-          <div className="col">
-            <a href='https://github.com/simon-a-walton'><i className="fab fa-github" /></a>
+const iconSizing = css({
+  fontSize: 'calc(16px + 1.2vh)'
+});
+
+const iconStyle = css({
+  color: 'white',
+  ':hover': {
+    color: 'black'
+  }
+});
+
+class Footer extends React.PureComponent {
+  render() {
+    return (
+      <>
+        <footer id="footer" className={`p-3 ${iconSizing}`}>
+          <div className="row text-center ">
+            <div className="col">
+              <a href={socialLinks.github}><i className={`fab fa-github ${iconStyle}`} /></a>
+            </div>
+             <div className="col">
+              <a href={socialLinks.linkedin}><i className={`fab fa-linkedin ${iconStyle}`} /></a>
+            </div>
+             <div className="col">
+              <a href={socialLinks.angellist}><i className={`fab fa-angellist ${iconStyle}`} /></a>
+            </div>
           </div>
-          <div className="col">
-            <a href='https://www.linkedin.com/in/simon-walton-36457323/'><i className="fab fa-linkedin" /></a>
-          </div>
-          <div className="col">
-            <a href="https://angel.co/u/simon-walton"><i className="fab fa-angellist" /></a>
-          </div>
-        </div>
-      </footer>
-    </>
-  )
+        </footer>
+      </>
+    )
+  }
 }
 
 export default Footer;
-

@@ -15,12 +15,7 @@ body {
   background-size: cover;
 }
 
-footer a {
-  color: white;
-  &:hover {
-     color: white;
-  }
-}
+
 
 .homepage {
   height: 85vh;
@@ -72,9 +67,6 @@ svg:hover {
   }
 }
 
-#footer {
-  font-size: calc(16px + 1.2vh);
-}
 
 #top-skills li {
   display: inline;

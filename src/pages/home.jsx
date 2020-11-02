@@ -30,6 +30,7 @@ class Home extends React.Component {
               onClick={onClick}
               alt="Simon the Coding Machine"
               className="simon-image"
+              title="Click me to enter!"
             />
           </RubberBand>
             { showResults ? <Results/> : null }
