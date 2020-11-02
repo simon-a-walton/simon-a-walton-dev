@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from 'glamor';
+import { socialLinks } from "./../constants/LinkConstants";
 
 const iconSizing = css({
   fontSize: 'calc(16px + 1.2vh)'
@@ -13,20 +13,20 @@ const iconStyle = css({
   }
 });
 
-
 class Footer extends React.PureComponent {
-  static propsTypes = {
-    link: PropTypes.string,
-    iconName: PropTypes.string
-  };
-
   render() {
     return (
       <>
         <footer id="footer" className={`p-3 ${iconSizing}`}>
           <div className="row text-center ">
             <div className="col">
-              <a href={this.props.link}><i className={`fab fa-${this.props.iconName} ${iconStyle}`} /></a>
+              <a href={socialLinks.github}><i className={`fab fa-github ${iconStyle}`} /></a>
+            </div>
+             <div className="col">
+              <a href={socialLinks.linkedin}><i className={`fab fa-linkedin ${iconStyle}`} /></a>
+            </div>
+             <div className="col">
+              <a href={socialLinks.angellist}><i className={`fab fa-angellist ${iconStyle}`} /></a>
             </div>
           </div>
         </footer>
