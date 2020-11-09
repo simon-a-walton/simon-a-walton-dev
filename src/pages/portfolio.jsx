@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Bethedj from '../components/Bethedj.jsx'
 import RealHealthMatters from '../components/RealHealthMatters.jsx'
-import SimonsCocktails from '../components/Simons-cocktails.jsx'
+import PureClean from '../components/PureClean.jsx'
 import { css } from 'glamor';
 
 const Portfolio = () => {
@@ -20,27 +20,27 @@ const Portfolio = () => {
             <Row>
               <Col sm={3} className="mt-3">
                 <Nav variant="pills" className="flex-column">
-                  <Nav.Item>
-                    <Nav.Link eventKey="first">Real Health Matters</Nav.Link>
+                 <Nav.Item>
+                    <Nav.Link eventKey="first">PureClean</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">BeTheDJ</Nav.Link>
+                    <Nav.Link eventKey="second">Real Health Matters</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Mister Cocktail</Nav.Link>
+                    <Nav.Link eventKey="third">BeTheDJ</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
               <Col sm={9}>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <RealHealthMatters />
+                    <PureClean />
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <Bethedj />
+                    <RealHealthMatters />
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    <SimonsCocktails />
+                    <Bethedj />
                   </Tab.Pane>
                 </Tab.Content>
               </Col>
