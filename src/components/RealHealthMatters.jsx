@@ -33,36 +33,25 @@ export const buttonListItem = css({
 })
 
 const RealHealthMatters = () => {
+  const images = [ RHM1, RHM2, RHM3 ];
   return (
     <>
     <div className="row p-3">
       <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <Carousel {...imageBorder}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={RHM1}
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={RHM2}
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={RHM3}
-              alt="Third slide"
-            />
-          </Carousel.Item>
+          {images.map((image, index) => (
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={image}
+                alt={image}
+                key={index}
+              />
+            </Carousel.Item>
+          ))}
         </Carousel>
       </div>
       <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
-
         <h5 className="py-4">A website for a Health Coaching company</h5>
          <h6>Features:</h6>
         <ol>
@@ -78,8 +67,28 @@ const RealHealthMatters = () => {
           <li><i className="fas fa-palette" /> <em>Glamor</em></li>
         </div>
         <div {...buttonList}>
-          <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>The site <i className="fas fa-laptop" /></a></li>
-          <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>The code <i className="fab fa-github" /></a></li>
+          <li {...buttonListItem}>
+            <a
+              className="git-button"
+              href="https://realhealthmatters.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The site
+              <i className="fas fa-laptop" />
+            </a>
+          </li>
+          <li {...buttonListItem}>
+            <a
+              className="git-button"
+              href="https://github.com/simon-a-walton/sam-mann"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The code
+              <i className="fab fa-github" />
+            </a>
+          </li>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import bedjevent from './../images/bedjevent.jpg';
-import bedjhome from './../images/bedjevent.jpg';
+import bedjhome from './../images/bedjhome.jpg';
 import bedjlist from './../images/bedjlist.jpg';
 import bedjmap from './../images/bedjmap.jpg';
 import bedjplay from './../images/bedjplay.jpg';
@@ -9,49 +9,24 @@ import { imageBorder, listStyle, buttonList, buttonListItem } from './RealHealth
 
 
 const Bethedj = () => {
+  const images = [ bedjhome, bedjevent, bedjlist, bedjmap, bedjplay ];
   return (
     <>
     <div className="row p-3">
       <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <Carousel {...imageBorder}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjevent}
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjhome}
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjlist}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjmap}
-              alt="Fourth slide"
-            />
-          </Carousel.Item>
-           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={bedjplay}
-              alt="Fifth slide"
-            />
-          </Carousel.Item>
+          {images.map((image, index) => (
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={image}
+                alt={image}
+                key={index}
+              />
+            </Carousel.Item>
+          ))}
         </Carousel>
       </div>
-
       <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
         <h5 className="py-4">A mobile web-app for requesting songs in bars and clubs</h5>
         <h6>Features for Bars:</h6>
@@ -72,8 +47,28 @@ const Bethedj = () => {
           <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
         </div>
         <div {...buttonList}>
-          <li {...buttonListItem}><a className="git-button" href='https://simon-a-walton.github.io/sam-mann/'>The site <i className="fas fa-laptop" /></a></li>
-          <li {...buttonListItem}><a className="git-button" href='https://github.com/simon-a-walton/sam-mann'>The code <i className="fab fa-github" /></a></li>
+          <li {...buttonListItem}>
+            <a
+              className="git-button"
+              href="http://www.bethedj.club/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The site
+              <i className="fas fa-laptop" />
+            </a>
+          </li>
+          <li {...buttonListItem}>
+            <a
+              className="git-button"
+              href="https://github.com/Marc-Medlej/BEtheDJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The code
+              <i className="fab fa-github" />
+            </a>
+          </li>
         </div>
       </div>
     </div>
