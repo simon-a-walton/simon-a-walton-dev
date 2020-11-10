@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   & h1, h2, h3, h4, h5, h6 {
     font-family: 'Prompt', sans-serif;
   }
@@ -14,8 +15,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
 
 .homepage {
   height: 85vh;
@@ -54,19 +53,6 @@ svg:hover {
 #portfolio-nav {
   font-size: calc(16px + 1.5vw);
 }
-
-.git-button {
-  padding: 8px;
-  background-color: $baby-pink;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  color: white;
-  &:hover {
-    color: black;
-    text-decoration: none;
-  }
-}
-
 
 #top-skills li {
   display: inline;
