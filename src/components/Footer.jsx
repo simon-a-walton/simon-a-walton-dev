@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'glamor';
+import { colors } from './../constants/StyleConstants';
 import { socialLinks } from "./../constants/LinkConstants";
 
 const iconSizing = css({
@@ -7,9 +8,9 @@ const iconSizing = css({
 });
 
 const iconStyle = css({
-  color: 'white',
-  ':hover': {
-    color: 'black'
+  color: "white",
+  ":hover": {
+    color: colors.babyPink
   }
 });
 
