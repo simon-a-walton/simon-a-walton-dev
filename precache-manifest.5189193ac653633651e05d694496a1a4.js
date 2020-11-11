@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "163fa1c2b100d55a437d433b2da7d379",
+    "revision": "3a95decf949fe620939d68b9cac3d483",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "6b2bc6f64b795695b1e9",
-    "url": "/static/css/main.67db071e.chunk.css"
+    "revision": "fa45c16f861607406f60",
+    "url": "/static/css/main.81710a97.chunk.css"
   },
   {
     "revision": "533887237d1fd34b94ab",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.574a72fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b2bc6f64b795695b1e9",
-    "url": "/static/js/main.132860ee.chunk.js"
+    "revision": "fa45c16f861607406f60",
+    "url": "/static/js/main.6d15f968.chunk.js"
   },
   {
     "revision": "47a15619f3e06b2dbcf2",
@@ -38,10 +38,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "401ff02e59bd27c079d527b08d54e632",
     "url": "/static/media/RHM3.401ff02e.jpg"
-  },
-  {
-    "revision": "9896f94a2eb05d8632b0d7c8f38c7cee",
-    "url": "/static/media/Rectangle 1.9896f94a.png"
   },
   {
     "revision": "8d5361ef832b630a4164a77ece18ef7b",
