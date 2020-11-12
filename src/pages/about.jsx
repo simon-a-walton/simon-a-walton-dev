@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.jsx';
 import Fade from 'react-reveal/Fade';
 import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
+import { skillsList } from './../data/skillLists';
 
 const aboutImage = css({
   width: '200px',
@@ -72,14 +73,9 @@ const About = () => {
         <div className={`container py-3 my-3 ${topSkillsBox}`}>
           <h3 className="text-center">Top Skills</h3>
           <div className="d-flex flex-wrap justify-content-center" id="top-skills">
-            <li><i className="fab fa-react" /> <em>ReactJS</em></li>
-            <li><i className="fab fa-js-square" /> <em>Javascript ES6</em></li>
-            <li><i className="fas fa-gem" /> <em>Ruby on Rails</em></li>
-            <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
-            <li><i className="fab fa-figma" /> <em>Figma</em></li>
-            <li><i className="far fa-file-alt" /> <em>HTML5</em></li>
-            <li><i className="fas fa-paint-brush" /> <em>SCSS</em></li>
-            <li><i className="fas fa-palette" /> <em>Glamor</em></li>
+            { skillsList.map((skill) => (
+              <li><i className={skill.className} /> <em>{skill.name}</em></li>
+            ))}
           </div>
         </div>
       </Fade>

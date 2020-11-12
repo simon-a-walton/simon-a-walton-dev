@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
+import { navLinks } from './../data/navLinks';
+import { Markup } from 'interweave';
 
 const containerStyle = css({
   backgroundColor: 'white',
@@ -19,27 +21,13 @@ class Navbar extends React.PureComponent {
       <>
         <nav className={`p-3 ${containerStyle}`}>
           <div className="row text-center ">
-            <div className="col d-flex justify-content-around">
-              <Link to='/about' className={linkStyle}>
-                <ul className="list-unstyled">
-                  <li><i className="fas fa-laptop-code" /></li>
-                  <li>About</li>
-                 </ul>
-              </Link>
-            </div>
-            <div id="portfolio-nav" className="col">
-              <Link to='/portfolio' className={linkStyle}>
-                <strong>Portfolio</strong>
-              </Link>
-            </div>
-            <div className="col">
-              <Link to='/contact' className={linkStyle}>
-                <ul className="list-unstyled">
-                  <li><i className="fas fa-paper-plane" /></li>
-                  <li>Contact</li>
-                </ul>
-              </Link>
-            </div>
+            {navLinks.map((nav) => (
+              <div className={nav.className} id={nav.id}>
+                <Link to={nav.link} className={linkStyle}>
+                  <Markup content={nav.content} />
+                </Link>
+              </div>
+            ))}
           </div>
         </nav>
       </>

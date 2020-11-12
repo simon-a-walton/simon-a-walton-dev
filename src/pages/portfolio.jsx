@@ -11,35 +11,32 @@ import PureClean from '../components/PureClean.jsx'
 import { css } from 'glamor';
 
 const Portfolio = () => {
+  const titles = [ "PureClean", "Real Health Matters", "BeTheDJ" ];
   return (
     <>
       <Fade>
         <Navbar />
         <div className={`container-fluid ${css({ color: 'white' })}`} id="portfolio-page">
-          <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Tab.Container id="left-tabs-example" defaultActiveKey="0">
             <Row>
               <Col sm={3} className="mt-3">
                 <Nav variant="pills" className="flex-column">
-                 <Nav.Item>
-                    <Nav.Link eventKey="first">PureClean</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">Real Health Matters</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="third">BeTheDJ</Nav.Link>
-                  </Nav.Item>
+                  { titles.map((title, index) => (
+                    <Nav.Item>
+                      <Nav.Link eventKey={index}>{title}</Nav.Link>
+                    </Nav.Item>
+                  ))}
                 </Nav>
               </Col>
               <Col sm={9}>
                 <Tab.Content>
-                  <Tab.Pane eventKey="first">
+                  <Tab.Pane eventKey="0">
                     <PureClean />
                   </Tab.Pane>
-                  <Tab.Pane eventKey="second">
+                  <Tab.Pane eventKey="1">
                     <RealHealthMatters />
                   </Tab.Pane>
-                  <Tab.Pane eventKey="third">
+                  <Tab.Pane eventKey="2">
                     <Bethedj />
                   </Tab.Pane>
                 </Tab.Content>

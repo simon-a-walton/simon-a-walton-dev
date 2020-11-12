@@ -6,6 +6,7 @@ import RHM3 from "./../images/RHM3.jpg"
 import { css } from "glamor";
 import { colors } from "./../constants/StyleConstants";
 import PortfolioLayout from "./../components/PortfolioLayout";
+import { RHMList } from './../data/skillLists';
 
 export const listStyle = css({
   display: 'flex',
@@ -36,32 +37,31 @@ const RealHealthMatters = () => {
     <>
       <PortfolioLayout
         carouselItem={images.map((image, index) => (
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={image}
-                  alt={image}
-                  key={index}
-                />
-              </Carousel.Item>
-            ))}
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={image}
+              alt={image}
+              key={index}
+            />
+          </Carousel.Item>
+        ))}
         title="Real Health Matters"
         description="A website for a Health Coaching company"
         gitHref="https://github.com/simon-a-walton/sam-mann"
         siteHref="https://realhealthmatters.co.uk"
       >
       <ol>
-          <li>User can see the coach's location on Mapbox map</li>
-          <li>User can send a message via an embedded form</li>
-          <li>There is a fun animation on the homepage with the title text appearing line-by-line</li>
-          <li>This is my first project using ReactJS and using in-line styling with Glamor</li>
-        </ol>
-        <div className={listStyle} id="top-skills">
-          <li><i className="fab fa-js-square mx-1" id = "java" /> <em>Javascript ES6</em></li>
-          <li><i className="fab fa-react" /> <em>ReactJS</em></li>
-          <li><i className="fab fa-bootstrap" /> <em>Bootstrap</em></li>
-          <li><i className="fas fa-palette" /> <em>Glamor</em></li>
-        </div>
+        <li>User can see the coach's location on Mapbox map</li>
+        <li>User can send a message via an embedded form</li>
+        <li>There is a fun animation on the homepage with the title text appearing line-by-line</li>
+        <li>This is my first project using ReactJS and using in-line styling with Glamor</li>
+      </ol>
+      <div className={listStyle} id="top-skills">
+        { RHMList.map((skill) => (
+          <li><i className={skill.className} /> <em>{skill.name}</em></li>
+        ))}
+      </div>
     </PortfolioLayout>
   </>
   )
