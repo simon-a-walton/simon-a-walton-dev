@@ -61,7 +61,9 @@ class Home extends React.Component {
                   />
                   <strong>Front End Developer</strong>
                 </li>
-                <li><Footer /></li>
+                <li>
+                  <Footer />
+                </li>
               </ul>
             </Bounce>
           </Container>
