@@ -7,6 +7,7 @@ import Modal from "./../images/pc-modal.jpg"
 import Promises from "./../images/pc-promise.jpg"
 import { listStyle } from './RealHealthMatters';
 import PortfolioLayout from "./../components/PortfolioLayout";
+import { PCList } from './../data/skillLists';
 
 const PureClean = () => {
   const images = [ Main, Tab, Contact, Modal, Promises ];
@@ -14,15 +15,15 @@ const PureClean = () => {
     <>
       <PortfolioLayout
         carouselItem={images.map((image, index) => (
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={image}
-                  alt={image}
-                  key={index}
-                />
-              </Carousel.Item>
-            ))}
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={image}
+              alt={image}
+              key={index}
+            />
+          </Carousel.Item>
+        ))}
         title="PureClean"
         description="A website for a new window cleaning company"
         gitHref="https://github.com/simon-a-walton/pure-clean"
@@ -35,10 +36,9 @@ const PureClean = () => {
         <li>CSS-in-JS used with Glamor plugin</li>
       </ol>
       <div className={listStyle} id="top-skills">
-        <li><i className="fab fa-react" /> <em>ReactJS</em></li>
-        <li><i className="fab fa-bootstrap" /> <em>React-Bootstrap</em></li>
-        <li><i className="fas fa-palette" /> <em>Glamor</em></li>
-        <li><i className="fas fa-cloud-upload-alt" /> <em>Cloudinary</em></li>
+        { PCList.map((skill) => (
+          <li><i className={skill.className} /> <em>{skill.name}</em></li>
+        ))}
       </div>
     </PortfolioLayout>
   </>
