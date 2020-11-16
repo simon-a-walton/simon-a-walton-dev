@@ -1,20 +1,17 @@
 export const navLinks = [
   {
-    className: "col d-flex justify-content-around",
-    id: "",
+    title: "About",
     link: "/about",
-    content: "<ul class='list-unstyled'><li><i class='fas fa-laptop-code'></i></li><li>About</li></ul></ul>"
+    icon: "fas fa-child"
   },
   {
-    className: "col",
-    id: "portfolio-nav",
+    title: "Portfolio",
     link: "/portfolio",
-    content: "<strong>Portfolio</strong>"
+    icon: "fas fa-swatchbook"
   },
   {
-    className: "col",
-    id: "",
+    title: "Contact",
     link:"/contact",
-    content: "<ul class='list-unstyled'><li><i class='fas fa-paper-plane'></i></li><li>Contact</li></ul>"
+    icon: "fas fa-paper-plane"
   }
 ];
