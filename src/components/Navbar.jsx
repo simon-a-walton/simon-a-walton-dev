@@ -27,12 +27,14 @@ class Navbar extends React.PureComponent {
           <div className="row text-center ">
             {navLinks.map((nav) => (
               <div className="col">
-                <Link to={nav.link} className={linkStyle}>
-                  <div>
-                    <i className={nav.icon} />
-                  </div>
-                  <div>
-                    {nav.title}
+                <Link to={nav.link} {...linkStyle}>
+                  <div className={ window.location.pathname === nav.link ? "activated" : "" }>
+                    <div>
+                      <i className={nav.icon} />
+                    </div>
+                    <div >
+                      {nav.title}
+                    </div>
                   </div>
                 </Link>
               </div>
