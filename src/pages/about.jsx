@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar.jsx';
-import Fade from 'react-reveal/Fade';
 import { css } from 'glamor';
 import { colors } from './../constants/StyleConstants';
 import { skillsList } from './../data/skillLists';
@@ -34,7 +33,6 @@ const textContent = css({
 const About = () => {
   return (
     <>
-    <Fade>
       <Navbar />
       <div className={`container p-4 ${css({ color: 'white' })}`} id="about-page">
         <div className="row pt-4">
@@ -71,14 +69,13 @@ const About = () => {
 
         </div>
         <div className={`container py-3 my-3 ${topSkillsBox}`}>
-          <h3 className="text-center">Top Skills</h3>
-          <div className="d-flex flex-wrap justify-content-center" id="top-skills">
-            { skillsList.map((skill) => (
-              <li><i className={skill.className} /> <em>{skill.name}</em></li>
-            ))}
-          </div>
+        <h3 className="text-center">Top Skills</h3>
+        <div className="d-flex flex-wrap justify-content-center" id="top-skills">
+          { skillsList.map((skill) => (
+            <li><i className={skill.className} /> <em>{skill.name}</em></li>
+          ))}
         </div>
-      </Fade>
+      </div>
     </>
   )
 }
