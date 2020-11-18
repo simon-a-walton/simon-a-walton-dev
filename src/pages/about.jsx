@@ -5,7 +5,8 @@ import { colors } from './../constants/StyleConstants';
 import { skillsList } from './../data/skillLists';
 
 const aboutImage = css({
-  width: '200px',
+  width: '280px',
+  height: '200px',
   border: '2px solid white',
   borderRadius: '4px',
   margin: '16px'
@@ -14,14 +15,20 @@ const aboutImage = css({
 const topSkillsBox = css({
   backgroundColor: 'white',
   color: colors.darkBlue,
-  borderRadius: '8px'
+  borderRadius: '8px',
+  "@media(max-width: 650px)":
+  { fontSize: "0.8em" }
 });
 
 const webLink = css({
   textDecoration: 'none',
   color: 'white',
+  backgroundColor: colors.babyPink,
+  borderRadius: '4px',
+  padding: '0 4px',
+  marginLeft: '4px',
   ':hover': {
-    color: colors.babyPink,
+    color: colors.darkBlue,
     textDecoration: 'none'
   }
 });
@@ -34,11 +41,11 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className={`container p-4 ${css({ color: 'white' })}`} id="about-page">
+      <div className={`container p-4 ${css({ color: 'white', "@media(max-width: 650px)": { fontSize: "0.8em" } })}`} id="about-page">
         <div className="row pt-4">
           <div className="col-lg-6 col-md-12 text-center pb-3">
             <img
-              src="https://avatars2.githubusercontent.com/u/60608204?s=460&u=517fe81ca49a5627e1e845120537a7a5b6f3b346&v=4"
+              src="https://media1.giphy.com/media/SZUnyVdIDAEQU/giphy.gif?cid=ecf05e47lkg6u194yqlnqni25npucib48hyjwkcfwtr6ka1o&rid=giphy.gif"
               alt="Simon the Coding Machine"
               className={aboutImage}
             />
@@ -46,16 +53,30 @@ const About = () => {
            <div className={`col-lg-6 col-md-12 pr-4 ${textContent}`}>
             <h2>Coding</h2>
               <p>
-                I'm a recent graduate from a Full-Stack Web Development programme, during which I delivered 3 MVC apps using Ruby on Rails, PostgreSQL, JavaScript, HTML5, CSS3 and Bootstrap.
-                Due to the fast pace of the course I have become a very fast learner and am eager to develop my skills and knowledge as a Front End Developer. I’m currently working on freelance projects using ReactJS and having strict code reviews with a Senior Developer.
+                I’m currently working as as Front End Web Dev, specialising in ReactJS.
+                I have training from a Full-Stack Web Development programme, during which I delivered 3 MVC apps using
+                Ruby on Rails, PostgreSQL, JavaScript, HTML5, CSS3 and Bootstrap. Due to the fast pace of the course I have
+                become a very fast learner and am eager to develop my skills and knowledge as a Front End Developer.
               </p>
             </div>
           </div>
           <div className="row pt-4">
-            <div className={`col-lg-6 col-md-12 pr-5 order-2 order-sm-1 ${textContent}`}>
+            <div className={`col-lg-6 col-md-12 order-2 order-sm-1 ${textContent}`}>
               <h2>Coaching</h2>
               <p>
-                I have experience working as a Positive Psychologist and Coach for tech companies. I have helped people to improve their communication and confidence skills by running workshops such as Presenting Skills and Having Difficult Conversations. More on my coaching work can be found <span><a href="https://inside.edited.com/why-we-put-wellbeing-at-the-heart-of-company-culture-cddee6550a90?gi=75e8b02e59e8" className={webLink}> here.</a></span>
+                I have experience working as a Positive Psychologist and Coach for tech companies.
+                I have helped people to improve their communication and confidence skills by running workshops such as
+                Presenting Skills and Having Difficult Conversations. More on my coaching work can be found
+                <span>
+                  <a
+                    href="https://inside.edited.com/why-we-put-wellbeing-at-the-heart-of-company-culture-cddee6550a90?gi=75e8b02e59e8"
+                    className={webLink}
+                    target="_blank"
+                    rel= "noopener noreferrer"
+                  >
+                    here.
+                  </a>
+                </span>
               </p>
             </div>
              <div className="col-lg-6 col-md-12 text-center order-1 order-sm-2">
