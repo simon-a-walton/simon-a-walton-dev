@@ -6,15 +6,16 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Bethedj from '../components/Bethedj.jsx'
 import RealHealthMatters from '../components/RealHealthMatters.jsx'
+import EasyStreamin from '../components/EasyStreamin.jsx'
 import PureClean from '../components/PureClean.jsx'
 import { css } from 'glamor';
 
 const Portfolio = () => {
-  const titles = [ "PureClean", "Real Health Matters", "BeTheDJ" ];
+  const titles = [ "PureClean", "Easy Streamin'", "Real Health Matters", "BeTheDJ" ];
   return (
     <>
       <Navbar />
-      <div className={`container-fluid ${css({ color: 'white' })}`} id="portfolio-page">
+      <div className={`container-fluid ${css({ color: 'white', "@media(max-width: 650px)": { fontSize: "0.8em" } })}`} id="portfolio-page">
         <Tab.Container id="left-tabs-example" defaultActiveKey="0">
           <Row>
             <Col sm={3} className="mt-3">
@@ -32,9 +33,12 @@ const Portfolio = () => {
                   <PureClean />
                 </Tab.Pane>
                 <Tab.Pane eventKey="1">
-                  <RealHealthMatters />
+                  <EasyStreamin />
                 </Tab.Pane>
                 <Tab.Pane eventKey="2">
+                  <RealHealthMatters />
+                </Tab.Pane>
+                <Tab.Pane eventKey="3">
                   <Bethedj />
                 </Tab.Pane>
               </Tab.Content>
