@@ -25,7 +25,7 @@ const PureClean = () => {
           </Carousel.Item>
         ))}
         title="PureClean"
-        description="A website for a new window cleaning company"
+        description="Currently in Development: A website for a new window cleaning company"
         gitHref="https://github.com/simon-a-walton/pure-clean"
         siteHref="https://pure-clean.vercel.app/"
       >
