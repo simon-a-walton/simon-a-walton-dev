@@ -1,16 +1,16 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import Main from "./../images/pc-main.jpg"
-import Tab from "./../images/pc-tab.jpg"
-import Contact from "./../images/pc-contact.jpg"
-import Modal from "./../images/pc-modal.jpg"
-import Promises from "./../images/pc-promise.jpg"
+import Main from "./../images/Main.jpg"
+import Empty from "./../images/Empty.jpg"
+import New from "./../images/New.jpg"
+import Popover from "./../images/Popover.jpg"
+import Playlist from "./../images/Playlist.jpg"
 import { listStyle } from './RealHealthMatters';
 import PortfolioLayout from "./../components/PortfolioLayout";
-import { PCList } from './../data/skillLists';
+import { ESList } from './../data/skillLists';
 
 const EasyStreamin = () => {
-  const images = [ Main, Tab, Contact, Modal, Promises ];
+  const images = [ Playlist, Popover, Empty, Main, New ];
   return (
     <>
       <PortfolioLayout
@@ -30,13 +30,14 @@ const EasyStreamin = () => {
         siteHref="https://easystreamin.herokuapp.com/"
       >
       <ol>
-        <li>User can see the company's location on embedded google map</li>
-        <li>User can send a message via an embedded form</li>
-        <li>React-Bootsrap used for the tabs in the Services page for better clarity of navigation</li>
-        <li>CSS-in-JS used with Glamor plugin</li>
+        <li>User can securely make an account and login</li>
+        <li>User can easily manage their playlists by adding and deleting</li>
+        <li>User can add as many playlists as they wish</li>
+        <li>JS popover when on a mobile device to remind that it is for desktop use only</li>
+        <li>Sign up and start streaming!</li>
       </ol>
       <div className={listStyle} id="top-skills">
-        { PCList.map((skill) => (
+        { ESList.map((skill) => (
           <li><i className={skill.className} /> <em>{skill.name}</em></li>
         ))}
       </div>
