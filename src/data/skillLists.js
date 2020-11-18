@@ -94,3 +94,26 @@ export const DJList = [
   }
 ];
 
+export const ESList = [
+  {
+    className: "fas fa-gem",
+    name: "Ruby on Rails"
+  },
+  {
+    className: "fas fa-user-shield",
+    name: "Devise Authentication"
+  },
+  {
+    className: "fab fa-js-square",
+    name: "Javascript ES6"
+  },
+  {
+    className: "fab fa-bootstrap",
+    name: "Bootstrap"
+  },
+  {
+    className: "fas fa-paint-brush",
+    name: "SCSS"
+  }
+];
+
