@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "./../constants/StyleConstants";
 import { css } from 'glamor';
+import Bounce from 'react-reveal/Bounce';
 
 const submitButton = css({
   marginTop: '12px',
@@ -46,7 +47,7 @@ export default class ContactForm extends React.Component {
             <input type="text" name="message" className={`p-3 w-100 ${inputBorder}`} />
           </div>
         </div>
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button className={submitButton}>Submit</button>}
+        {status === "SUCCESS" ? <p>Thanks!</p> : <Bounce top><button className={submitButton}>Submit</button></Bounce>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
     );
