@@ -1,8 +1,8 @@
 import React from "react";
 import { css } from "glamor";
 import PropTypes from "prop-types";
-import { colors } from './../constants/StyleConstants';
-import Carousel from 'react-bootstrap/Carousel'
+import { colors } from "./../constants/StyleConstants";
+import Carousel from "react-bootstrap/Carousel";
 
 const imageBorder = css({
   border: "6px solid white",
@@ -26,12 +26,12 @@ const buttonStyling = css({
 const buttonList = css({
   padding: 0,
   margin: 0,
-  listStyleType: 'none',
-  display: 'flex',
-  justifyContent: 'center',
-  '& li': {
-    margin: '10px',
-    fontSize: 'calc(10px + 0.5vw)'
+  listStyleType: "none",
+  display: "flex",
+  justifyContent: "center",
+  "& li": {
+    margin: "10px",
+    fontSize: "calc(10px + 0.5vw)"
   }
 });
 
@@ -49,9 +49,10 @@ class PortfolioLayout extends React.PureComponent {
     return (
       <>
         <div className="row p-3">
-          <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4" {...css({ "@media(max-width: 992px)": { display: "flex", justifyContent: "center"} })}>
+          <div
+            className="col-sm-12 col-md-12 col-lg-4 col-xl-4" {...css({ "@media(max-width: 992px)": { display: "flex", justifyContent: "center"} })}>
             <Carousel {...imageBorder}>
-                {this.props.carouselItem}
+              {this.props.carouselItem}
             </Carousel>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
@@ -71,16 +72,16 @@ class PortfolioLayout extends React.PureComponent {
                 </a>
               </li>
               <li {...buttonStyling}>
-              <a
-                href={this.props.gitHref}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                The code
-                &nbsp; <i className="fab fa-github" />
-              </a>
-            </li>
-          </ul>
+                <a
+                  href={this.props.gitHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The code
+                  &nbsp; <i className="fab fa-github" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </>

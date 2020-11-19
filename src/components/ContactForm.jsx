@@ -1,23 +1,23 @@
 import React from "react";
 import { colors } from "./../constants/StyleConstants";
-import { css } from 'glamor';
-import Bounce from 'react-reveal/Bounce';
+import { css } from "glamor";
+import Bounce from "react-reveal/Bounce";
 
 const submitButton = css({
-  marginTop: '12px',
+  marginTop: "12px",
   backgroundColor: colors.babyPink,
-  color: 'white',
-  border: '2px solid white',
-  borderRadius: '8px',
-  ':hover': {
-    color: 'black',
-    border: '2px solid black',
+  color: "white",
+  border: "2px solid white",
+  borderRadius: "8px",
+  ":hover": {
+    color: "black",
+    border: "2px solid black",
   }
 });
 
 const inputBorder = css({
-  border: '2px solid white',
-  borderRadius: '8px'
+  border: "2px solid white",
+  borderRadius: "8px"
 });
 
 export default class ContactForm extends React.Component {

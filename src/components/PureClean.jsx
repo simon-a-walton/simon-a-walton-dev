@@ -1,13 +1,13 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-import Main from "./../images/pc-main.jpg"
-import Tab from "./../images/pc-tab.jpg"
-import Contact from "./../images/pc-contact.jpg"
-import Modal from "./../images/pc-modal.jpg"
-import Promises from "./../images/pc-promise.jpg"
-import { listStyle } from './RealHealthMatters';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import Main from "./../images/pc-main.jpg";
+import Tab from "./../images/pc-tab.jpg";
+import Contact from "./../images/pc-contact.jpg";
+import Modal from "./../images/pc-modal.jpg";
+import Promises from "./../images/pc-promise.jpg";
+import { listStyle } from "./RealHealthMatters";
 import PortfolioLayout from "./../components/PortfolioLayout";
-import { PCList } from './../data/skillLists';
+import { PCList } from "./../data/skillLists";
 
 const PureClean = () => {
   const images = [ Main, Tab, Contact, Modal, Promises ];
@@ -36,8 +36,10 @@ const PureClean = () => {
         <li>CSS-in-JS used with Glamor plugin</li>
       </ol>
       <div className={listStyle} id="top-skills">
-        { PCList.map((skill) => (
-          <li><i className={skill.className} /> <em>{skill.name}</em></li>
+        { PCList.map((skill, index) => (
+          <li key={index}>
+            <i className={skill.className} /> <em>{skill.name}</em>
+          </li>
         ))}
       </div>
     </PortfolioLayout>

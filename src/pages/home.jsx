@@ -1,21 +1,21 @@
-import React, {useState} from 'react';
-import Container from 'react-bootstrap/Container'
-import { colors } from './../constants/StyleConstants';
-import Navbar from '../components/Navbar.jsx';
-import Footer from '../components/Footer.jsx';
-import Bounce from 'react-reveal/Bounce';
-import RubberBand from 'react-reveal/RubberBand';
-import Sparkle from 'react-sparkle';
-import simonHeadshot from './../images/simon-headshot.jpg';
-import { css } from 'glamor';
+import React, {useState} from "react";
+import Container from "react-bootstrap/Container"
+import { colors } from "./../constants/StyleConstants";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import Bounce from "react-reveal/Bounce";
+import RubberBand from "react-reveal/RubberBand";
+import Sparkle from "react-sparkle";
+import simonHeadshot from "./../images/simon-headshot.jpg";
+import { css } from "glamor";
 
 const nameText = css({
-  fontSize: 'calc(10px + 2.2vw)'
+  fontSize: "calc(10px + 2.2vw)"
 });
 
 const descriptionText =css({
-  fontSize: 'calc(10px + 1.2vw)',
-  position: 'relative'
+  fontSize: "calc(10px + 1.2vw)",
+  position: "relative"
 });
 
 const headshotImage = css({
@@ -32,7 +32,7 @@ const headshotImage = css({
   bottom: 0,
   borderRadius: "50%",
   "&:hover": {
-  cursor: "pointer"
+    cursor: "pointer"
   }
 });
 
@@ -52,10 +52,10 @@ class Home extends React.Component {
               {...headshotImage}
             />
           </RubberBand>
-            { showResults ? <Results/> : null }
+          { showResults ? <Results/> : null }
         </div>
-    )
-  }
+      )
+    }
 
     const Results = () => {
       return (
@@ -74,9 +74,9 @@ class Home extends React.Component {
                 <li {...nameText}><strong>SIMON WALTON</strong></li>
                 <li {...descriptionText}>
                   <Sparkle
-                    color={'white'}
+                    color={"white"}
                     count={30}
-                    flickerSpeed={'slow'}
+                    flickerSpeed={"slow"}
                   />
                   <strong>Front End Developer</strong>
                 </li>
