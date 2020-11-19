@@ -5,12 +5,29 @@ import { colors } from './../constants/StyleConstants';
 import { navLinks } from './../data/navLinks';
 import Badge from 'react-bootstrap/Badge'
 
+const gridContainer =css({
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr 1fr 1fr",
+  textAlign: "center"
+});
+
 const containerStyle = css({
   backgroundColor: 'white',
   color: colors.darkBlue,
   fontSize: "1.3em",
   "@media(max-width: 650px)": {
   fontSize: "0.8em"
+  }
+});
+
+const backButton = css({
+  color: "inherit",
+  position: "absolute",
+  top: 28,
+  left: 30,
+  "@media(max-width: 650px)": {
+    top: 28,
+    left: 12
   }
 });
 
@@ -24,9 +41,16 @@ class Navbar extends React.PureComponent {
     return (
       <>
         <nav className={`p-3 ${containerStyle}`}>
-          <div className="row text-center ">
+          <div {...gridContainer}>
+            <a
+              href ="/"
+              {...backButton}
+              className={ window.location.pathname === "/" ? "invisible" : "visible" }
+            >
+              <i className="fas fa-chevron-left" />
+            </a>
             {navLinks.map((nav) => (
-              <div className="col">
+              <div>
                 <Link to={nav.link} {...linkStyle}>
                   <div className={ window.location.pathname === nav.link ? "activated" : "" }>
                     <div>
@@ -39,7 +63,7 @@ class Navbar extends React.PureComponent {
                 </Link>
               </div>
             ))}
-            <div className="col">
+            <div>
               <a
                 href="https://simonwaltondev.medium.com/your-first-create-react-app-website-resource-list-b50326389239"
                 target="_blank"
