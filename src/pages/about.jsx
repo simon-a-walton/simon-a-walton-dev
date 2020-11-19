@@ -1,47 +1,48 @@
-import React from 'react';
-import Navbar from '../components/Navbar.jsx';
-import { css } from 'glamor';
-import { colors } from './../constants/StyleConstants';
-import { skillsList } from './../data/skillLists';
+import React from "react";
+import Navbar from "../components/Navbar.jsx";
+import { css } from "glamor";
+import { colors } from "./../constants/StyleConstants";
+import { skillsList } from "./../data/skillLists";
 
 const aboutImage = css({
-  width: '280px',
-  height: '200px',
-  border: '2px solid white',
-  borderRadius: '4px',
-  margin: '16px'
+  width: "280px",
+  height: "200px",
+  border: "2px solid white",
+  borderRadius: "4px",
+  margin: "16px"
 });
 
 const topSkillsBox = css({
-  backgroundColor: 'white',
+  backgroundColor: "white",
   color: colors.darkBlue,
-  borderRadius: '8px',
-  "@media(max-width: 650px)":
-  { fontSize: "0.8em" }
+  borderRadius: "8px",
+  "@media(max-width: 650px)":{
+    fontSize: "0.8em"
+  }
 });
 
 const webLink = css({
-  textDecoration: 'none',
-  color: 'white',
+  textDecoration: "none",
+  color: "white",
   backgroundColor: colors.babyPink,
-  borderRadius: '4px',
-  padding: '0 4px',
-  marginLeft: '4px',
-  ':hover': {
+  borderRadius: "4px",
+  padding: "0 4px",
+  marginLeft: "4px",
+  ":hover": {
     color: colors.darkBlue,
-    textDecoration: 'none'
+    textDecoration: "none"
   }
 });
 
 const textContent = css({
-  maxWidth: '550px'
+  maxWidth: "550px"
 });
 
 const About = () => {
   return (
     <>
       <Navbar />
-      <div className={`container p-4 ${css({ color: 'white', "@media(max-width: 650px)": { fontSize: "0.8em" } })}`} id="about-page">
+      <div className={`container p-4 ${css({ color: "white", "@media(max-width: 650px)": { fontSize: "0.8em" } })}`} id="about-page">
         <div className="row pt-4">
           <div className="col-lg-6 col-md-12 text-center pb-3">
             <img
@@ -92,8 +93,8 @@ const About = () => {
         <div className={`container py-3 my-3 ${topSkillsBox}`}>
         <h3 className="text-center">Top Skills</h3>
         <div className="d-flex flex-wrap justify-content-center" id="top-skills">
-          { skillsList.map((skill) => (
-            <li>
+          { skillsList.map((skill, index) => (
+            <li key={index}>
               <i className={skill.className} {...css({ color: colors.babyPink })} /> <em>{skill.name}</em>
             </li>
           ))}

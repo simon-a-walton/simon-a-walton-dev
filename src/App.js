@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import About from './pages/about.jsx'
-import Home from './pages/home.jsx'
-import Portfolio from './pages/portfolio.jsx'
-import Contact from './pages/contact.jsx'
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import About from "./pages/about.jsx";
+import Home from "./pages/home.jsx";
+import Portfolio from "./pages/portfolio.jsx";
+import Contact from "./pages/contact.jsx";
 
 export default class App extends React.Component {
   render() {

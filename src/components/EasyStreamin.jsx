@@ -1,13 +1,13 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-import Main from "./../images/Main.jpg"
-import Empty from "./../images/Empty.jpg"
-import New from "./../images/New.jpg"
-import Popover from "./../images/Popover.jpg"
-import Playlist from "./../images/Playlist.jpg"
-import { listStyle } from './RealHealthMatters';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import Main from "./../images/Main.jpg";
+import Empty from "./../images/Empty.jpg";
+import New from "./../images/New.jpg";
+import Popover from "./../images/Popover.jpg";
+import Playlist from "./../images/Playlist.jpg";
+import { listStyle } from "./RealHealthMatters";
 import PortfolioLayout from "./../components/PortfolioLayout";
-import { ESList } from './../data/skillLists';
+import { ESList } from "./../data/skillLists";
 
 const EasyStreamin = () => {
   const images = [ Playlist, Popover, Empty, Main, New ];
@@ -37,8 +37,10 @@ const EasyStreamin = () => {
         <li>Sign up and start streaming!</li>
       </ol>
       <div className={listStyle} id="top-skills">
-        { ESList.map((skill) => (
-          <li><i className={skill.className} /> <em>{skill.name}</em></li>
+        { ESList.map((skill, index) => (
+          <li key={index}>
+            <i className={skill.className} /> <em>{skill.name}</em>
+          </li>
         ))}
       </div>
     </PortfolioLayout>

@@ -1,13 +1,13 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import bedjevent from './../images/bedjevent.jpg';
-import bedjhome from './../images/bedjhome.jpg';
-import bedjlist from './../images/bedjlist.jpg';
-import bedjmap from './../images/bedjmap.jpg';
-import bedjplay from './../images/bedjplay.jpg';
-import { listStyle } from './RealHealthMatters';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import bedjevent from "./../images/bedjevent.jpg";
+import bedjhome from "./../images/bedjhome.jpg";
+import bedjlist from "./../images/bedjlist.jpg";
+import bedjmap from "./../images/bedjmap.jpg";
+import bedjplay from "./../images/bedjplay.jpg";
+import { listStyle } from "./RealHealthMatters";
 import PortfolioLayout from "./../components/PortfolioLayout";
-import { DJList } from './../data/skillLists';
+import { DJList } from "./../data/skillLists";
 
 
 const Bethedj = () => {
@@ -40,8 +40,10 @@ const Bethedj = () => {
         <li>The DJ has a dashboard where they can see the top requested songs of the night.</li>
       </ol>
       <div className={listStyle} id="top-skills">
-        { DJList.map((skill) => (
-          <li><i className={skill.className} /> <em>{skill.name}</em></li>
+        { DJList.map((skill, index) => (
+          <li key={index}>
+            <i className={skill.className} /> <em>{skill.name}</em>
+          </li>
         ))}
       </div>
     </PortfolioLayout>

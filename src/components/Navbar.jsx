@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import { css } from 'glamor';
-import { colors } from './../constants/StyleConstants';
-import { navLinks } from './../data/navLinks';
-import Badge from 'react-bootstrap/Badge'
+import { css } from "glamor";
+import { colors } from "./../constants/StyleConstants";
+import { navLinks } from "./../data/navLinks";
+import Badge from "react-bootstrap/Badge";
 
 const gridContainer =css({
   display: "grid",
@@ -12,7 +12,7 @@ const gridContainer =css({
 });
 
 const containerStyle = css({
-  backgroundColor: 'white',
+  backgroundColor: "white",
   color: colors.darkBlue,
   fontSize: "1.3em",
   "@media(max-width: 650px)": {
@@ -33,7 +33,7 @@ const backButton = css({
 
 const linkStyle = css({
   color: colors.darkBlue,
-  ':hover': {textDecoration: 'none', color: colors.babyPink}
+  ":hover": {textDecoration: "none", color: colors.babyPink}
 });
 
 class Navbar extends React.PureComponent {
@@ -49,14 +49,14 @@ class Navbar extends React.PureComponent {
             >
               <i className="fas fa-chevron-left" />
             </a>
-            {navLinks.map((nav) => (
-              <div>
+            {navLinks.map((nav, index) => (
+              <div key={index}>
                 <Link to={nav.link} {...linkStyle}>
                   <div className={ window.location.pathname === nav.link ? "activated" : "" }>
                     <div>
                       <i className={nav.icon} />
                     </div>
-                    <div >
+                    <div>
                       {nav.title}
                     </div>
                   </div>
