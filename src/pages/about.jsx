@@ -93,7 +93,9 @@ const About = () => {
         <h3 className="text-center">Top Skills</h3>
         <div className="d-flex flex-wrap justify-content-center" id="top-skills">
           { skillsList.map((skill) => (
-            <li><i className={skill.className} /> <em>{skill.name}</em></li>
+            <li>
+              <i className={skill.className} {...css({ color: colors.babyPink })} /> <em>{skill.name}</em>
+            </li>
           ))}
         </div>
       </div>
