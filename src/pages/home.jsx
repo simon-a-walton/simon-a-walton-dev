@@ -59,7 +59,7 @@ class Home extends React.Component {
 
     const Results = () => {
       return (
-        <div {...css({ position: "relative" })}>
+        <div>
           <Bounce top>
             <Navbar />
           </Bounce>
