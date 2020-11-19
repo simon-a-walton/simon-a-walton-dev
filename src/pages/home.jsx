@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container'
+import { colors } from './../constants/StyleConstants';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import Bounce from 'react-reveal/Bounce';
@@ -17,6 +18,24 @@ const descriptionText =css({
   position: 'relative'
 });
 
+const headshotImage = css({
+  border: `4px solid ${colors.babyPink}`,
+  height: "40%",
+  position: "absolute",
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginTop: "auto",
+  marginBottom: "auto",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  borderRadius: "50%",
+  "&:hover": {
+  cursor: "pointer"
+  }
+});
+
 class Home extends React.Component {
   render() {
     const Search = () => {
@@ -29,8 +48,8 @@ class Home extends React.Component {
               src={simonHeadshot}
               onClick={onClick}
               alt="Simon the Coding Machine"
-              className="simon-image"
               title="Click me to enter!"
+              {...headshotImage}
             />
           </RubberBand>
             { showResults ? <Results/> : null }
@@ -40,7 +59,7 @@ class Home extends React.Component {
 
     const Results = () => {
       return (
-        <div>
+        <div {...css({ position: "relative" })}>
           <Bounce top>
             <Navbar />
           </Bounce>
@@ -48,7 +67,7 @@ class Home extends React.Component {
            <img
               src={simonHeadshot}
               alt="Simon the Coding Machine"
-              className="simon-image"
+              {...headshotImage}
             />
             <Bounce bottom>
               <ul className="list-unstyled">
