@@ -25,7 +25,8 @@ const EasyStreamin = () => {
           </Carousel.Item>
         ))}
         title="Easy Streamin'"
-        description="Personal Project: A fun web app for listening to Spotify playlists online for free"
+        update="Personal Project:"
+        description=" A fun web app for listening to Spotify playlists online for free"
         gitHref="https://github.com/simon-a-walton/easystreamin"
         siteHref="https://easystreamin.herokuapp.com/"
       >

@@ -8,6 +8,8 @@ import Promises from "./../images/pc-promise.jpg";
 import { listStyle } from "./RealHealthMatters";
 import PortfolioLayout from "./../components/PortfolioLayout";
 import { PCList } from "./../data/skillLists";
+import { css } from "glamor";
+import { colors } from "./../constants/StyleConstants";
 
 const PureClean = () => {
   const images = [ Main, Tab, Contact, Modal, Promises ];
@@ -25,7 +27,8 @@ const PureClean = () => {
           </Carousel.Item>
         ))}
         title="PureClean"
-        description="Currently in Development: A website for a new window cleaning company"
+        update="Currently in Development:"
+        description=" A website for a new window cleaning company"
         gitHref="https://github.com/simon-a-walton/pure-clean"
         siteHref="https://pure-clean.vercel.app/"
       >
