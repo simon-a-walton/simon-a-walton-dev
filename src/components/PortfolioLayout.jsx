@@ -41,6 +41,7 @@ class PortfolioLayout extends React.PureComponent {
     children: PropTypes.node.isRequired,
     title: PropTypes.string,
     description: PropTypes.string,
+    update: PropTypes.string,
     gitHref: PropTypes.string,
     siteHref: PropTypes.string
   };
@@ -56,8 +57,13 @@ class PortfolioLayout extends React.PureComponent {
             </Carousel>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-4">
-            <h4 className="py-2">{this.props.title}</h4>
-            <h5 className="pb-4">{this.props.description}</h5>
+            <h3 className="py-2">{this.props.title}</h3>
+            <h5 className="pb-4">
+              <span {...css({ borderBottom: `2px solid ${colors.babyPink}`})}>
+                {this.props.update}
+              </span>
+              {this.props.description}
+            </h5>
             <h6>Features:</h6>
               {this.props.children}
             <ul {...buttonList}>
