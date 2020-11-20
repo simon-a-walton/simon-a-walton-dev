@@ -78,7 +78,7 @@ class Home extends React.Component {
                     count={30}
                     flickerSpeed={"slow"}
                   />
-                  <strong>Front End Developer</strong>
+                  <strong>Full-Stack Developer</strong>
                 </li>
                 <li>
                   <Footer />

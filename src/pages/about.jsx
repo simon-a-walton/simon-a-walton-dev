@@ -54,10 +54,10 @@ const About = () => {
            <div className={`col-lg-6 col-md-12 pr-4 ${textContent}`}>
             <h2>Coding</h2>
               <p>
-                I’m currently working as as Front End Web Dev, specialising in ReactJS.
+                I’m currently working as as Freelance Web Dev, specialising in ReactJS.
                 I have training from a Full-Stack Web Development programme, during which I delivered 3 MVC apps using
                 Ruby on Rails, PostgreSQL, JavaScript, HTML5, CSS3 and Bootstrap. Due to the fast pace of the course I have
-                become a very fast learner and am eager to develop my skills and knowledge as a Front End Developer.
+                become a very fast learner and am eager to develop my skills and knowledge.
               </p>
             </div>
           </div>
