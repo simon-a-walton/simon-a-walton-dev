@@ -42,12 +42,12 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className={`container p-4 ${css({ color: "white", "@media(max-width: 650px)": { fontSize: "0.8em" } })}`} id="about-page">
+      <div className={`container p-4 ${css({ color: "white", "@media(max-width: 650px)": { fontSize: "0.8em" }, "@media(min-width: 1200px)": { maxHeight: "100vh" } })}`} id="about-page">
         <div className="row pt-4">
           <div className="col-lg-6 col-md-12 text-center pb-3">
             <img
               src="https://media1.giphy.com/media/SZUnyVdIDAEQU/giphy.gif?cid=ecf05e47lkg6u194yqlnqni25npucib48hyjwkcfwtr6ka1o&rid=giphy.gif"
-              alt="Simon the Coding Machine"
+              alt="The internet"
               className={aboutImage}
             />
           </div>
