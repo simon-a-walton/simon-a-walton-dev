@@ -10,6 +10,15 @@ import EasyStreamin from "../components/EasyStreamin.jsx";
 import PureClean from "../components/PureClean.jsx";
 import { css } from "glamor";
 
+const fontAltering = css({
+  "@media(min-width: 1300px)": {
+    fontSize: "1.3em",
+  "& h3, h5, h6, a": {
+     fontSize: "1.3em"
+  },
+  }
+});
+
 const Portfolio = () => {
   const titles = [ "PureClean", "Easy Streamin'", "Real Health Matters", "BeTheDJ" ];
   return (
@@ -22,7 +31,7 @@ const Portfolio = () => {
               <Nav variant="pills" className="flex-column">
                 {titles.map((title, index) => (
                   <Nav.Item>
-                    <Nav.Link eventKey={index}>{title}</Nav.Link>
+                    <Nav.Link eventKey={index} {...fontAltering}>{title}</Nav.Link>
                   </Nav.Item>
                 ))}
               </Nav>
