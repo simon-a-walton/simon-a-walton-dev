@@ -8,8 +8,6 @@ import Promises from "./../images/pc-promise.jpg";
 import { listStyle } from "./RealHealthMatters";
 import PortfolioLayout from "./../components/PortfolioLayout";
 import { PCList } from "./../data/skillLists";
-import { css } from "glamor";
-import { colors } from "./../constants/StyleConstants";
 
 const PureClean = () => {
   const images = [ Main, Tab, Contact, Modal, Promises ];
