@@ -28,7 +28,7 @@ const PureClean = () => {
         update="Currently in Development:"
         description=" A website for a new window cleaning company"
         gitHref="https://github.com/simon-a-walton/pure-clean"
-        siteHref="https://pure-clean.vercel.app/"
+        siteHref="https://purecleanrustington.cleaning/"
       >
       <ol>
         <li>User can see the company's location on embedded google map</li>
