@@ -72,7 +72,7 @@ class PortfolioLayout extends React.PureComponent {
             </Carousel>
           </div>
           <div className={`col-sm-12 col-md-12 col-lg-8 col-xl-8 px-md-5 pt-4 ${fontAltering}`}>
-            <h3 className="py-2 mb-5" {...css({ "@media(max-width: 992px)": { fontSize: "1.2rem" } })}>
+            <h3 className="py-2 mb-3" {...css({ "@media(max-width: 992px)": { fontSize: "1.2rem" } })}>
               <span {...css({ background: colors.babyPink, fontWeight: "bold", padding: "8px", borderRadius: "4px" })}>
                 {this.props.title}
                 <ul {...buttonList}>
