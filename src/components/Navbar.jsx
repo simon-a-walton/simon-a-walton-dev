@@ -14,7 +14,7 @@ const gridContainer =css({
 const containerStyle = css({
   backgroundColor: "white",
   color: colors.darkBlue,
-  fontSize: "1.3em",
+  fontSize: "0.9rem",
   "@media(max-width: 650px)": {
   fontSize: "0.8em"
   }
