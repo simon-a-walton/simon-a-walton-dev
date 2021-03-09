@@ -10,7 +10,7 @@ import simonHeadshot from "./../images/simon-headshot.jpg";
 import { css } from "glamor";
 
 const nameText = css({
-  fontSize: "calc(10px + 2.2vw)"
+  fontSize: "calc(10px + 1.6vw)"
 });
 
 const descriptionText =css({
@@ -20,7 +20,7 @@ const descriptionText =css({
 
 const headshotImage = css({
   border: `4px solid ${colors.babyPink}`,
-  height: "40%",
+  height: "30%",
   position: "absolute",
   marginLeft: "auto",
   marginRight: "auto",
@@ -78,7 +78,7 @@ class Home extends React.Component {
                     count={30}
                     flickerSpeed={"slow"}
                   />
-                  <strong>Full-Stack Developer</strong>
+                  <strong>Web Developer & Coach</strong>
                 </li>
                 <li>
                   <Footer />
