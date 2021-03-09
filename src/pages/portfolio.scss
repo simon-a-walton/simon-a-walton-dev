@@ -25,3 +25,15 @@ $dark-blue: #164BA7;
   color: white;
   padding: 8px;
 }
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-inner {
+  max-width: 200px;
+  max-height: 300px;
+  }
+}
+
